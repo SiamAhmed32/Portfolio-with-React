@@ -18,7 +18,7 @@ const itemVariants = {
 
 const Hero = () => {
   return (
-    <section id="home" className="relative w-full min-h-screen mx-auto flex">
+    <section id="home" className="relative w-full min-h-screen mx-auto flex items-center pt-24 sm:pt-0">
       <div className="w-full max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <motion.div
           className="flex flex-col text-center lg:text-left"
