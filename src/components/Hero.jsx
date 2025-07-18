@@ -1,7 +1,10 @@
+// src/components/Hero.jsx
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
-import { FaWhatsapp, FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import { FaWhatsapp, FaGithub, FaEnvelope } from "react-icons/fa";
 import HeroAnimation from "./HeroAnimation";
+import ComputersCanvas from "./canvas/Computers";
+import ErrorBoundary from "./ErrorBoundary";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -48,8 +51,6 @@ const Hero = () => {
                 2000,
                 "Creative Problem Solver",
                 2000,
-                "Front-End Developer",
-                2000,
               ]}
               wrapper="span"
               speed={50}
@@ -94,7 +95,9 @@ const Hero = () => {
         </motion.div>
 
         <div className="w-full h-full hidden lg:flex justify-center items-center">
-          <HeroAnimation />
+          <ErrorBoundary fallback={<HeroAnimation />}>
+            <ComputersCanvas />
+          </ErrorBoundary>
         </div>
       </div>
     </section>
