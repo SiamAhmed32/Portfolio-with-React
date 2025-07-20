@@ -135,7 +135,7 @@ const About = () => {
           <p className='text-secondary text-[17px] max-w-2xl leading-[30px]'>
             With a strong foundation in Python-driven logic and problem-solving, I discovered my passion for creating tangible, interactive experiences on the web. This journey led me to specialize as a Front-End Developer, where I now leverage my expertise in JavaScript, React.js, and Tailwind CSS to build high-performance, responsive web applications. I am passionate about bridging the gap between complex functionality and exceptional user experience, focusing on writing clean, maintainable code and seamlessly integrating RESTful APIs.
           </p>
-          <a href='/Kaosar Ahmed.pdf (8).pdf' download>
+          <a href='/kaosar-ahmed-cv.pdf' download>
             <button className="mt-8 bg-tertiary hover:bg-[#1d1836] py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary transition-colors duration-300">
               Download CV
             </button>
