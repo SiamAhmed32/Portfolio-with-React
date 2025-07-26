@@ -25,12 +25,13 @@ import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
 import brac_university from "./company/brac_university.png";
-import ielts from "./company/ielts.png"; // ADDED THIS LINE
+import ielts from "./company/ielts.png";
 
 import weatherapp from "./weatherapp.png";
 import ai_image_gen from "./ai_image_gen.png";
 import movieapp from "./movieapp.png";
 import property_app from "./property_app.png";
+import birl_logo from "./company/birl_logo.png"
 
 export {
   logo,
@@ -62,4 +63,5 @@ export {
   movieapp,
   property_app,
   earth_fallback,
+  birl_logo
 };

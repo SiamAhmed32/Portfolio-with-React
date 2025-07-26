@@ -13,11 +13,13 @@ import {
   brac_university,
   ielts,
   web,
+  birl_logo,
 } from "@/assets";
 
 export const navLinks = [
   { id: "home", title: "Home" },
   { id: "about", title: "About" },
+  { id: "experience", title: "Experience" },
   { id: "education", title: "Education" }, 
   { id: "work", title: "Projects" }, 
   { id: "contact", title: "Contact" },
@@ -38,7 +40,7 @@ export const technologies = [
   { name: "Git", icon: git },
 ];
 
-export const experiences = [
+export const education = [
   {
     title: "B.Sc in Computer Science & Engineering",
     company_name: "Brac University",
@@ -59,6 +61,21 @@ export const experiences = [
     date: "Achieved: 2023",
     points: [
       "Achieved a proficient level of English competency, demonstrating strong communication skills for collaborative international environments.",
+    ],
+  },
+];
+
+export const workExperiences = [
+  {
+    title: "Software Engineer (Frontend)",
+    company_name: "Bay Institute of Renaissance Limited (BIRL)",
+    icon: birl_logo,
+    iconBg: "#E6DEDD",
+    date: "July 2025 - Present",
+    points: [
+      "Collaborating with the development team to build responsive user interfaces using React.js and Tailwind CSS.",
+      "Developing and implementing new features for web applications, focusing on clean and maintainable code.",
+      "Assisting in the integration of RESTful APIs to connect the front-end to backend services.",
     ],
   },
 ];

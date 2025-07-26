@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { styles } from "@/styles";
-import { services } from "@/constants";
 import { SectionWrapper } from "@/hoc";
 import { fadeIn, textVariant } from "@/utils/motion";
 import { FaPython, FaReact } from "react-icons/fa";
@@ -12,23 +11,8 @@ const TechVisual = () => {
     animate: { transition: { staggerChildren: 0.2 } },
   };
 
-  const particleVariants = {
-    initial: { opacity: 0, scale: 0 },
-    animate: { 
-      opacity: [0, 1, 1, 0], 
-      scale: 1,
-      transition: { duration: 2, repeat: Infinity, ease: "linear" } 
-    },
-  };
-
-  const nodes = [
-    { cx: 150, cy: 50 }, { cx: 250, cy: 100 }, { cx: 200, cy: 180 },
-    { cx: 80, cy: 250 }, { cx: 320, cy: 250 }, { cx: 150, cy: 350 },
-  ];
-
-  const connections = [
-    [0, 1], [0, 2], [1, 2], [1, 4], [2, 3], [2, 4], [3, 5], [4, 5]
-  ];
+  const nodes = [ { cx: 150, cy: 50 }, { cx: 250, cy: 100 }, { cx: 200, cy: 180 }, { cx: 80, cy: 250 }, { cx: 320, cy: 250 }, { cx: 150, cy: 350 }, ];
+  const connections = [ [0, 1], [0, 2], [1, 2], [1, 4], [2, 3], [2, 4], [3, 5], [4, 5] ];
 
   return (
     <motion.svg viewBox="0 0 400 400" className="w-full h-full" initial="initial" animate="animate" variants={containerVariants}>
@@ -77,16 +61,6 @@ const TechVisual = () => {
           />
         </motion.g>
       ))}
-
-      {connections.map(([start, end], i) => (
-        <motion.circle key={`particle-${i}`} r="3" fill="#00f5ff" variants={particleVariants}>
-          <animateMotion
-            dur={`${(i % 3) + 2}s`}
-            repeatCount="indefinite"
-            path={`M ${nodes[start].cx} ${nodes[start].cy} L ${nodes[end].cx} ${nodes[end].cy}`}
-          />
-        </motion.circle>
-      ))}
     </motion.svg>
   );
 };
@@ -95,7 +69,7 @@ const strengths = [
   {
     title: "Front-End Development",
     icon: FaReact,
-    description: "Expertise in creating dynamic and responsive user interfaces using modern technologies like React.js, JavaScript, and Tailwind CSS."
+    description: "Expertise in creating dynamic UIs with a focus on UI/UX design principles. Proficient in React.js, Tailwind CSS, and advanced state management with Redux."
   },
   {
     title: "Python & Logic",
@@ -105,7 +79,7 @@ const strengths = [
   {
     title: "API & Functionality",
     icon: FiGitMerge,
-    description: "Proven ability in integrating RESTful APIs for seamless functionality, with foundational knowledge of databases like MySQL and SQLite."
+    description: "Proven ability in integrating RESTful APIs and Firebase Authentication. Experienced in implementing robust client-side validation for seamless functionality."
   }
 ];
 

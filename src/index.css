@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import 'react-vertical-timeline-component/style.min.css';
 
 @layer base {
   :root {
