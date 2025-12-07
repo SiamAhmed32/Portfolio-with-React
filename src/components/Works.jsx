@@ -20,7 +20,7 @@ const ProjectCard = ({
   return (
     <motion.div 
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-      className="w-full sm:w-[360px]"
+      className="w-full max-w-[360px] sm:w-[360px]"
     >
       <Tilt
         tiltMaxAngleX={35}
@@ -118,7 +118,7 @@ const Works = () => {
         </motion.p>
       </div>
 
-      <div className='mt-20 flex flex-wrap gap-7 justify-center'>
+      <div className='mt-20 flex flex-wrap gap-7 justify-center px-4 sm:px-0'>
         {projects && projects.length > 0 ? (
           projects.map((project, index) => {
             if (!project || !project.image) {

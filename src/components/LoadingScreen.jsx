@@ -19,18 +19,18 @@ const LoadingScreen = ({ onComplete }) => {
     // Show content after a brief delay
     const contentTimer = setTimeout(() => {
       setShowContent(true);
-    }, 300);
+    }, 100);
 
-    // Simulate loading progress
+    // Simulate loading progress - faster increment
     const progressInterval = setInterval(() => {
       setLoadingProgress((prev) => {
         if (prev >= 100) {
           clearInterval(progressInterval);
           return 100;
         }
-        return prev + 2;
+        return prev + 5;
       });
-    }, 50);
+    }, 30);
 
     return () => {
       clearTimeout(contentTimer);
@@ -39,14 +39,14 @@ const LoadingScreen = ({ onComplete }) => {
   }, []);
 
   useEffect(() => {
-    // Auto-complete after 3.5 seconds or when progress reaches 100%
+    // Auto-complete when progress reaches 100% - faster exit
     if (loadingProgress >= 100) {
       const exitTimer = setTimeout(() => {
         setIsExiting(true);
         setTimeout(() => {
           onComplete();
-        }, 800);
-      }, 500);
+        }, 400);
+      }, 200);
       return () => clearTimeout(exitTimer);
     }
   }, [loadingProgress, onComplete]);

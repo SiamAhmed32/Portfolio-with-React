@@ -6,7 +6,6 @@ import { SectionWrapper } from "@/hoc";
 import { textVariant, fadeIn, staggerContainer } from "@/utils/motion";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
-import Experience3DCanvas from "./canvas/Experience3D";
 import { Briefcase, Code, TrendingUp, Zap } from "lucide-react";
 
 const ExperienceCard = ({ experience, index, isInView }) => {
@@ -175,16 +174,6 @@ const Experience = () => {
 
   return (
     <div className="relative w-full min-h-screen overflow-hidden bg-gradient-to-b from-[#050816] via-[#100d25] to-[#050816]">
-      {/* 3D Background Models */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 right-10 w-64 h-64 md:w-96 md:h-96 opacity-30">
-          <Experience3DCanvas modelType="computer" position={[0, 0, 0]} />
-        </div>
-        <div className="absolute bottom-20 left-10 w-48 h-48 md:w-72 md:h-72 opacity-20">
-          <Experience3DCanvas modelType="planet" position={[0, 0, 0]} />
-        </div>
-      </div>
-
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
