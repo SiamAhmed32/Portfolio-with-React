@@ -13,7 +13,6 @@ import {
   brac_university,
   ielts,
   web,
-  birl_logo,
 } from "@/assets";
 
 export const navLinks = [
@@ -67,15 +66,17 @@ export const education = [
 
 export const workExperiences = [
   {
-    title: "Software Engineer (Frontend)",
-    company_name: "Bay Institute of Renaissance Limited (BIRL)",
-    icon: birl_logo,
-    iconBg: "#E6DEDD",
-    date: "July 2025 - Present",
+    title: "Software Engineer",
+    company_name: "ThinkCrypt",
+    icon: null, // Using company name instead of logo
+    iconBg: "#6366f1",
+    date: "August 2025 – Present | On-site",
     points: [
-      "Collaborating with the development team to build responsive user interfaces using React.js and Tailwind CSS.",
-      "Developing and implementing new features for web applications, focusing on clean and maintainable code.",
-      "Assisting in the integration of RESTful APIs to connect the front-end to backend services.",
+      "Engineered full-scale web applications using Next.js 14+, React 18+, TypeScript, and Tailwind CSS, serving 10,000+ daily active users in production environments.",
+      "Designed and developed 20+ reusable UI components using Shadcn UI and modular architecture patterns, reducing development time by 40% and ensuring consistent design system implementation.",
+      "Implemented secure JWT-based authentication with robust session handling. Integrated REST APIs using React Query and RTK Query for real-time data sync.",
+      "Built responsive dashboards and admin panels with advanced filtering, pagination, and real-time updates, improving user engagement by 25% and reducing page load times by 30%.",
+      "Collaborated in Agile/Scrum teams of 5+ developers, contributing to standups, sprint planning, and code reviews to deliver scalable features.",
     ],
   },
 ];

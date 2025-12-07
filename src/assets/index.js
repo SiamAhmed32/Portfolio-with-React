@@ -31,7 +31,6 @@ import weatherapp from "./weatherapp.png";
 import ai_image_gen from "./ai_image_gen.png";
 import movieapp from "./movieapp.png";
 import property_app from "./property_app.png";
-import birl_logo from "./company/birl_logo.png"
 
 export {
   logo,
@@ -62,6 +61,5 @@ export {
   ai_image_gen,
   movieapp,
   property_app,
-  earth_fallback,
-  birl_logo
+  earth_fallback
 };

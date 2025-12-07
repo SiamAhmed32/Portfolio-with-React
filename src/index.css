@@ -71,3 +71,19 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* Custom Vertical Timeline Styling */
+.vertical-timeline-element-date {
+  color: #fff !important;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.vertical-timeline-element-content {
+  transition: all 0.3s ease;
+}
+
+.vertical-timeline-element-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(99, 102, 241, 0.2) !important;
+}

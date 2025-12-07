@@ -21,13 +21,59 @@ const IconSqlite = (props) => (<svg viewBox="0 0 24 24" {...props}><path fill="#
 const IconVercel = (props) => (<svg viewBox="0 0 24 24" {...props}><path fill="currentColor" d="M12 1.36l12 21.28H0z"/></svg>);
 const IconNetlify = (props) => (<svg viewBox="0 0 24 24" {...props}><path fill="#00C7B7" d="M2 2h20v20H2z"/><path fill="#FFF" d="M7.6 17.5h2.5V9.4L7.6 12v5.5zm8.9-8.1L14 12v5.5h2.5V9.4zM10.1 12l2-3.1 1.9 3.1-1.9 3.2-2-3.2z"/></svg>);
 const IconFirebase = (props) => (<svg viewBox="0 0 24 24" {...props}><path fill="#FFCA28" d="M4.33 20.33l7.07-17.5a.5.5 0 01.93 0l7.07 17.5a.5.5 0 01-.63.63l-7.2-2.88-7.2 2.88a.5.5 0 01-.63-.63z"/><path fill="#FFA000" d="M11.8 5.71L4.73 23.21a.5.5 0 00.63.63l6.44-2.58z"/><path fill="#F57C00" d="M20.27 19.73L12.2 4.23 4.96 20.96l7.2-2.88z"/></svg>);
+const IconTypeScript = (props) => (<svg viewBox="0 0 128 128" {...props}><path fill="#3178C6" d="M1.5 63.91v62.5h125v-125H1.5zm100.73-5a15.56 15.56 0 017.82 2.17 9.6 9.6 0 013.24 3.57 11 11 0 011.13 5.25 11.79 11.79 0 01-.86 5.15 10.32 10.32 0 01-2.54 3.83 12.4 12.4 0 01-4 2.65 19 19 0 01-5.33 1.34 21.45 21.45 0 01-4.62-.05 16.09 16.09 0 01-4.28-1.16v-12a14.81 14.81 0 003.89 1.05 8.75 8.75 0 004.29-.72 2.78 2.78 0 001.55-2.5 2.63 2.63 0 00-.78-2 5.57 5.57 0 00-2.17-1.21l-4.58-1.28a13.29 13.29 0 01-5.33-2.12 8.12 8.12 0 01-2.78-3.31 11.75 11.75 0 01-1-5 10.89 10.89 0 011.73-5.79 12.5 12.5 0 014.67-4.19 16.16 16.16 0 016.78-1.93 18.39 18.39 0 016.22 1 12.11 12.11 0 014.28 2.56l-3.11 8.28a11.78 11.78 0 00-2.11-1.28 9.65 9.65 0 00-2.78-.72 5.09 5.09 0 00-2.5.5 2.24 2.24 0 00-1.11 2 2 2 0 00.61 1.51 5.06 5.06 0 001.89 1.12l4.58 1.28a15.86 15.86 0 016 2.22 9.23 9.23 0 013.11 3.36 11.22 11.22 0 011.28 5.47 12.78 12.78 0 01-1.95 6.73 13.52 13.52 0 01-5.28 4.95 19.42 19.42 0 01-7.65 1.54 22.75 22.75 0 01-7.27-1.11 15.07 15.07 0 01-5.84-3.11l3.11-8.28a13.78 13.78 0 002.11 1.28 10.5 10.5 0 003 .72 6.65 6.65 0 003.22-.61 2.86 2.86 0 001.44-2.58 2.56 2.56 0 00-.72-1.89 5.57 5.57 0 00-2.17-1.21l-4.58-1.28z"/></svg>);
+const IconMongoDB = (props) => (<svg viewBox="0 0 256 256" {...props}><path fill="#47A248" d="M128 0C57.308 0 0 57.307 0 128s57.308 128 128 128c70.693 0 128-57.307 128-128S198.693 0 128 0z"/><path fill="#FFF" d="M128 20c59.647 0 108 48.353 108 108s-48.353 108-108 108S20 187.647 20 128 68.353 20 128 20z"/><path fill="#47A248" d="M128 40c48.602 0 88 39.398 88 88s-39.398 88-88 88S40 176.602 40 128 79.398 40 128 40z"/><path fill="#FFF" d="M128 60c37.555 0 68 30.445 68 68s-30.445 68-68 68-68-30.445-68-68 30.445-68 68-68z"/><path fill="#47A248" d="M128 80c26.51 0 48 21.49 48 48s-21.49 48-48 48-48-21.49-48-48 21.49-48 48-48z"/><path fill="#FFF" d="M128 100c15.464 0 28 12.536 28 28s-12.536 28-28 28-28-12.536-28-28 12.536-28 28-28z"/></svg>);
+const IconFramerMotion = (props) => (<svg viewBox="0 0 24 24" {...props}><path fill="#0055FF" d="M12 0L0 12l12 12 12-12L12 0zM12 4l6.343 6.343L12 16.686 5.657 10.343 12 4z"/></svg>);
+const IconChakraUI = (props) => (<svg viewBox="0 0 24 24" {...props}><path fill="#319795" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2.4c5.302 0 9.6 4.298 9.6 9.6S17.302 21.6 12 21.6 2.4 17.302 2.4 12 6.698 2.4 12 2.4z"/><path fill="#319795" d="M12 4.8c-3.976 0-7.2 3.224-7.2 7.2S8.024 19.2 12 19.2s7.2-3.224 7.2-7.2S15.976 4.8 12 4.8z"/></svg>);
+const IconSwiper = (props) => (<svg viewBox="0 0 24 24" {...props}><path fill="#6332F6" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>);
+const IconRTKQuery = (props) => (<svg viewBox="0 0 24 24" {...props}><path fill="#764ABC" d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-1 15l-5-5 1.41-1.41L11 14.17l7.59-7.59L20 8l-9 9z"/></svg>);
+const IconReactQuery = (props) => (<svg viewBox="0 0 24 24" {...props}><path fill="#FF4154" d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"/><circle fill="#FF4154" cx="12" cy="12" r="3"/></svg>);
+const IconREST = (props) => (<svg viewBox="0 0 24 24" {...props}><path fill="#6C757D" d="M4 4h16v16H4V4zm2 2v12h12V6H6zm2 2h8v2H8V8zm0 4h8v2H8v-2zm0 4h5v2H8v-2z"/></svg>);
+const IconAxios = (props) => (<svg viewBox="0 0 24 24" {...props}><path fill="#5A29E4" d="M12 0L0 12l12 12 12-12L12 0zm0 4l6.343 6.343L12 16.686 5.657 10.343 12 4z"/></svg>);
+const IconFetch = (props) => (<svg viewBox="0 0 24 24" {...props}><path fill="#0066CC" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>);
+const IconGitHub = (props) => (<svg viewBox="0 0 24 24" {...props}><path fill="#181717" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>);
+const IconAgile = (props) => (<svg viewBox="0 0 24 24" {...props}><path fill="#FF6B6B" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>);
+const IconUIUX = (props) => (<svg viewBox="0 0 24 24" {...props}><path fill="#9B59B6" d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>);
 
 const technologies = {
-  "Programming Languages": [ { name: "Python", icon: IconPython }, { name: "JavaScript", icon: IconJavascript }, { name: "Java", icon: IconJava }, ],
-  "Front End": [ { name: "React JS", icon: IconReactjs }, { name: "Redux", icon: IconRedux }, { name: "HTML 5", icon: IconHtml }, { name: "CSS 3", icon: IconCss }, { name: "Tailwind CSS", icon: IconTailwind }, { name: "Bootstrap", icon: IconBootstrap }, ],
-  "Backend": [ { name: "Next.js", icon: IconNextjs }, { name: "Node JS", icon: IconNodejs }, { name: "Firebase", icon: IconFirebase }, ],
-  "Databases": [ { name: "MySQL", icon: IconMysql }, { name: "SQLite", icon: IconSqlite }, ],
-  "Developer Tools": [ { name: "Git", icon: IconGit }, { name: "Vercel", icon: IconVercel }, { name: "Netlify", icon: IconNetlify }, ],
+  "Languages & Web Foundations": [
+    { name: "JavaScript (ES6+)", icon: IconJavascript },
+    { name: "TypeScript", icon: IconTypeScript },
+    { name: "Python", icon: IconPython },
+    { name: "Java", icon: IconJava },
+    { name: "HTML", icon: IconHtml },
+    { name: "CSS", icon: IconCss },
+  ],
+  "Frameworks": [
+    { name: "Next.js", icon: IconNextjs },
+    { name: "React.js", icon: IconReactjs },
+    { name: "Redux", icon: IconRedux },
+    { name: "Framer Motion", icon: IconFramerMotion },
+    { name: "Tailwind", icon: IconTailwind },
+    { name: "Bootstrap", icon: IconBootstrap },
+    { name: "Chakra UI", icon: IconChakraUI },
+    { name: "Swiper", icon: IconSwiper },
+  ],
+  "Databases & APIs": [
+    { name: "MongoDB", icon: IconMongoDB },
+    { name: "Firebase", icon: IconFirebase },
+    { name: "MySQL", icon: IconMysql },
+    { name: "SQLite", icon: IconSqlite },
+    { name: "RTK Query", icon: IconRTKQuery },
+    { name: "React Query", icon: IconReactQuery },
+    { name: "REST API", icon: IconREST },
+    { name: "Axios", icon: IconAxios },
+    { name: "Fetch", icon: IconFetch },
+  ],
+  "Developer Tools & Methodologies": [
+    { name: "Git", icon: IconGit },
+    { name: "GitHub", icon: IconGitHub },
+    { name: "Vercel", icon: IconVercel },
+    { name: "Netlify", icon: IconNetlify },
+    { name: "Node JS", icon: IconNodejs },
+    { name: "Agile (Scrum)", icon: IconAgile },
+    { name: "UI/UX Principles", icon: IconUIUX },
+  ],
 };
 
 const cardVariants = {
