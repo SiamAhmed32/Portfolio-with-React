@@ -5,8 +5,65 @@ import { SectionWrapper } from "@/hoc";
 import { fadeIn, textVariant } from "@/utils/motion";
 import { FaPython, FaReact } from "react-icons/fa";
 import { FiGitMerge } from "react-icons/fi";
-import Experience3DCanvas from "./canvas/Experience3D";
 
+const TechVisual = () => {
+  const containerVariants = {
+    animate: { transition: { staggerChildren: 0.2 } },
+  };
+
+  const nodes = [ { cx: 150, cy: 50 }, { cx: 250, cy: 100 }, { cx: 200, cy: 180 }, { cx: 80, cy: 250 }, { cx: 320, cy: 250 }, { cx: 150, cy: 350 }, ];
+  const connections = [ [0, 1], [0, 2], [1, 2], [1, 4], [2, 3], [2, 4], [3, 5], [4, 5] ];
+
+  return (
+    <motion.svg viewBox="0 0 400 400" className="w-full h-full" initial="initial" animate="animate" variants={containerVariants}>
+      <defs>
+        <radialGradient id="node-gradient" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0%" stopColor="#915EFF" />
+          <stop offset="100%" stopColor="#5a29b0" />
+        </radialGradient>
+      </defs>
+      
+      {connections.map(([start, end], i) => (
+        <motion.path
+          key={`line-${i}`}
+          d={`M ${nodes[start].cx} ${nodes[start].cy} L ${nodes[end].cx} ${nodes[end].cy}`}
+          stroke="#aaa6c3"
+          strokeOpacity="0.3"
+          strokeWidth="1"
+          variants={{ initial: { pathLength: 0 }, animate: { pathLength: 1, transition: { duration: 1.5, delay: i * 0.1 } } }}
+        />
+      ))}
+
+      {nodes.map((node, i) => (
+        <motion.g key={`node-group-${i}`}>
+          <motion.circle
+            cx={node.cx}
+            cy={node.cy}
+            r="8"
+            fill="url(#node-gradient)"
+            variants={{ initial: { scale: 0 }, animate: { scale: 1, transition: { duration: 0.5, delay: i * 0.1 } } }}
+          />
+          <motion.circle
+            cx={node.cx}
+            cy={node.cy}
+            r="8"
+            fill="transparent"
+            stroke="#915EFF"
+            strokeWidth="2"
+            variants={{ 
+              initial: { scale: 1, opacity: 0 }, 
+              animate: { 
+                scale: [1, 2.5, 1], 
+                opacity: [0, 0.5, 0],
+                transition: { duration: 3, repeat: Infinity, delay: i * 0.3 }
+              } 
+            }}
+          />
+        </motion.g>
+      ))}
+    </motion.svg>
+  );
+};
 
 const strengths = [
   {
@@ -47,26 +104,20 @@ const About = () => {
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
-      <div className="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative">
+      <div className="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <motion.div variants={fadeIn("", "", 0.1, 1)}>
-          <p className='text-gray-300 text-[17px] max-w-2xl leading-[30px]'>
+          <p className='text-secondary text-[17px] max-w-2xl leading-[30px]'>
             With a strong foundation in Python-driven logic and problem-solving, I discovered my passion for creating tangible, interactive experiences on the web. This journey led me to specialize as a Front-End Developer, where I now leverage my expertise in JavaScript, React.js, and Tailwind CSS to build high-performance, responsive web applications. I am passionate about bridging the gap between complex functionality and exceptional user experience, focusing on writing clean, maintainable code and seamlessly integrating RESTful APIs.
           </p>
           <a href='/kaosar-ahmed-cv.pdf' download>
-            <button className="mt-8 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-lg shadow-purple-500/50 transition-all duration-300">
+            <button className="mt-8 bg-tertiary hover:bg-[#1d1836] py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary transition-colors duration-300">
               Download CV
             </button>
           </a>
         </motion.div>
         
-        {/* 3D Model - Clearly Visible */}
-        <motion.div 
-          variants={fadeIn("", "", 0.2, 1)} 
-          className="w-full h-[400px] md:h-[500px] lg:h-[600px] relative"
-        >
-          <div className="absolute inset-0 w-full h-full">
-            <Experience3DCanvas modelType="computer" position={[0, 0, 0]} />
-          </div>
+        <motion.div variants={fadeIn("", "", 0.2, 1)} className="w-full h-[300px] md:h-full">
+          <TechVisual />
         </motion.div>
       </div>
 

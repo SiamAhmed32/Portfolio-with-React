@@ -20,14 +20,14 @@ const ProjectCard = ({
   return (
     <motion.div 
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-      className="w-full max-w-[360px] sm:w-[360px]"
+      className="w-full sm:w-[360px] mb-6"
     >
       <Tilt
         tiltMaxAngleX={35}
         tiltMaxAngleY={35}
         scale={1.05}
         transitionSpeed={450}
-        className='bg-tertiary p-5 rounded-2xl h-full flex flex-col'
+        className='bg-tertiary p-5 rounded-2xl h-full flex flex-col w-full'
       >
         <div className='relative w-full h-[230px] flex-shrink-0 bg-gray-800 rounded-2xl overflow-hidden'>
           {image ? (
@@ -100,7 +100,7 @@ const Works = () => {
 
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div variants={textVariant()} className="px-4 sm:px-0">
         <p className={`${styles.sectionSubText} `}>My work</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
       </motion.div>
@@ -108,7 +108,7 @@ const Works = () => {
       <div className='w-full flex'>
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
+          className='mt-3 text-secondary text-[14px] sm:text-[17px] max-w-3xl leading-[24px] sm:leading-[30px] px-4 sm:px-0'
         >
           Following projects showcase my skills and experience through
           real-world examples of my work. Each project is briefly described with
@@ -118,7 +118,7 @@ const Works = () => {
         </motion.p>
       </div>
 
-      <div className='mt-20 flex flex-wrap gap-7 justify-center px-4 sm:px-0'>
+      <div className='mt-20 flex flex-wrap gap-4 sm:gap-7 justify-center px-4 sm:px-0'>
         {projects && projects.length > 0 ? (
           projects.map((project, index) => {
             if (!project || !project.image) {
