@@ -27,6 +27,10 @@ import threejs from "./tech/threejs.svg";
 import brac_university from "./company/brac_university.png";
 import ielts from "./company/ielts.png";
 
+import shohoz from "./shohoz.PNG";
+import coastal from "./coastal.PNG";
+import bazarey from "./bazarey.PNG";
+import closetbd from "./closet.PNG";
 import weatherapp from "./weatherapp.png";
 import ai_image_gen from "./ai_image_gen.png";
 import movieapp from "./movieapp.png";
@@ -57,6 +61,10 @@ export {
   threejs,
   brac_university,
   ielts,
+  shohoz,
+  coastal,
+  bazarey,
+  closetbd,
   weatherapp,
   ai_image_gen,
   movieapp,

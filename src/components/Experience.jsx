@@ -7,7 +7,7 @@ import { textVariant, fadeIn, staggerContainer } from "@/utils/motion";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 import Experience3DCanvas from "./canvas/Experience3D";
-import { Briefcase, Code, Users, TrendingUp } from "lucide-react";
+import { Briefcase, Code, TrendingUp, Zap } from "lucide-react";
 
 const ExperienceCard = ({ experience, index, isInView }) => {
   const cardRef = useRef(null);
@@ -87,7 +87,7 @@ const ExperienceCard = ({ experience, index, isInView }) => {
 
         <CardContent className="relative z-10 space-y-6">
           {/* Key Achievements */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="flex items-center gap-3 p-3 rounded-lg bg-purple-500/10 border border-purple-500/20">
               <TrendingUp className="w-5 h-5 text-purple-400" />
               <div>
@@ -98,15 +98,22 @@ const ExperienceCard = ({ experience, index, isInView }) => {
             <div className="flex items-center gap-3 p-3 rounded-lg bg-purple-500/10 border border-purple-500/20">
               <Code className="w-5 h-5 text-purple-400" />
               <div>
-                <p className="text-xs text-gray-400">Components</p>
+                <p className="text-xs text-gray-400">Components Built</p>
                 <p className="text-sm font-bold text-white">20+</p>
               </div>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-lg bg-purple-500/10 border border-purple-500/20">
-              <Users className="w-5 h-5 text-purple-400" />
+              <Zap className="w-5 h-5 text-purple-400" />
               <div>
-                <p className="text-xs text-gray-400">Team Size</p>
-                <p className="text-sm font-bold text-white">5+</p>
+                <p className="text-xs text-gray-400">Performance Boost</p>
+                <p className="text-sm font-bold text-white">30% Faster</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-3 p-3 rounded-lg bg-purple-500/10 border border-purple-500/20">
+              <TrendingUp className="w-5 h-5 text-purple-400" />
+              <div>
+                <p className="text-xs text-gray-400">User Engagement</p>
+                <p className="text-sm font-bold text-white">+25%</p>
               </div>
             </div>
           </div>

@@ -18,31 +18,46 @@ const ProjectCard = ({
   live_demo_link,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div 
+      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+      className="w-full sm:w-[360px]"
+    >
       <Tilt
         tiltMaxAngleX={35}
         tiltMaxAngleY={35}
         scale={1.05}
         transitionSpeed={450}
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
+        className='bg-tertiary p-5 rounded-2xl h-full flex flex-col'
       >
-        <div className='relative w-full h-[230px]'>
-          <img
-            src={image}
-            alt={name}
-            className='w-full h-full object-cover rounded-2xl'
-          />
+        <div className='relative w-full h-[230px] flex-shrink-0 bg-gray-800 rounded-2xl overflow-hidden'>
+          {image ? (
+            <img
+              src={image}
+              alt={name}
+              className='w-full h-full object-cover rounded-2xl'
+              onError={(e) => {
+                console.error(`Failed to load image for ${name}:`, image);
+                e.target.style.display = 'none';
+                e.target.nextElementSibling.style.display = 'flex';
+              }}
+            />
+          ) : null}
+          <div className='absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center text-white text-sm' style={{ display: image ? 'none' : 'flex' }}>
+            {name}
+          </div>
           <div className='absolute inset-0 flex justify-end m-3 card-img_hover gap-2'>
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
-            >
-              <img
-                src={github}
-                alt='source code'
-                className='w-1/2 h-1/2 object-contain'
-              />
-            </div>
+            {source_code_link && (
+              <div
+                onClick={() => window.open(source_code_link, "_blank")}
+                className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+              >
+                <img
+                  src={github}
+                  alt='source code'
+                  className='w-1/2 h-1/2 object-contain'
+                />
+              </div>
+            )}
             {live_demo_link && (
               <div
                 onClick={() => window.open(live_demo_link, "_blank")}
@@ -58,9 +73,9 @@ const ProjectCard = ({
           </div>
         </div>
 
-        <div className='mt-5'>
-          <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-          <p className='mt-2 text-secondary text-[14px]'>{description}</p>
+        <div className='mt-5 flex-grow flex flex-col'>
+          <h3 className='text-white font-bold text-[24px] mb-2'>{name}</h3>
+          <p className='text-secondary text-[14px] leading-relaxed flex-grow'>{description}</p>
         </div>
 
         <div className='mt-4 flex flex-wrap gap-2'>
@@ -79,6 +94,10 @@ const ProjectCard = ({
 };
 
 const Works = () => {
+  // Debug: Log projects count
+  console.log('Total projects:', projects.length);
+  console.log('Projects:', projects.map(p => p.name));
+
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -99,14 +118,24 @@ const Works = () => {
         </motion.p>
       </div>
 
-      <div className='mt-20 flex flex-wrap gap-7'>
-        {projects.map((project, index) => (
-          <ProjectCard
-            key={`project-${index}`}
-            index={index}
-            {...project}
-          />
-        ))}
+      <div className='mt-20 flex flex-wrap gap-7 justify-center'>
+        {projects && projects.length > 0 ? (
+          projects.map((project, index) => {
+            if (!project || !project.image) {
+              console.warn(`Project ${index} is missing data:`, project);
+              return null;
+            }
+            return (
+              <ProjectCard
+                key={`project-${index}`}
+                index={index}
+                {...project}
+              />
+            );
+          })
+        ) : (
+          <p className='text-white'>No projects found</p>
+        )}
       </div>
     </>
   );

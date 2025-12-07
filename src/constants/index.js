@@ -6,6 +6,10 @@ import {
   css,
   git,
   redux,
+  shohoz,
+  coastal,
+  bazarey,
+  closetbd,
   weatherapp,
   ai_image_gen,
   movieapp,
@@ -82,6 +86,68 @@ export const workExperiences = [
 ];
 
 export const projects = [
+  {
+    name: "Shohoz - Air Tickets",
+    description:
+      "Bangladesh's largest online travel platform for booking air tickets. Built a comprehensive flight booking system with search, compare, and booking functionality. Features include one-way, round-trip, and multi-city flight options with real-time price comparison.",
+    tags: [
+      { name: "Next.js", color: "blue-text-gradient" },
+      { name: "TypeScript", color: "pink-text-gradient" },
+      { name: "Redux", color: "green-text-gradient" },
+      { name: "RTK Query", color: "blue-text-gradient" },
+      { name: "Tailwind CSS", color: "green-text-gradient" },
+    ],
+    image: shohoz,
+    source_code_link: "",
+    live_demo_link: "https://www.shohoz.com/air-tickets",
+  },
+  {
+    name: "Coastal Water Filters",
+    description:
+      "E-commerce platform for water filter products. Engineered a robust data layer with RTK Query for fast search, caching, and real-time synchronization of inventory and order status. Utilized Redux for global state management.",
+    tags: [
+      { name: "Next.js", color: "blue-text-gradient" },
+      { name: "TypeScript", color: "pink-text-gradient" },
+      { name: "Redux", color: "green-text-gradient" },
+      { name: "RTK Query", color: "blue-text-gradient" },
+      { name: "Tailwind CSS", color: "green-text-gradient" },
+    ],
+    image: coastal,
+    source_code_link: "",
+    live_demo_link: "https://coastal-frontend.vercel.app",
+  },
+  {
+    name: "Bazary - E-commerce",
+    description:
+      "Full-scale e-commerce platform with comprehensive product catalog, category filtering, shopping cart, and 20+ content pages. Built responsive product listings with dynamic sidebar navigation using RTK Query and Shadcn UI.",
+    tags: [
+      { name: "Next.js", color: "blue-text-gradient" },
+      { name: "TypeScript", color: "pink-text-gradient" },
+      { name: "Tailwind CSS", color: "green-text-gradient" },
+      { name: "Redux", color: "green-text-gradient" },
+      { name: "RTK Query", color: "blue-text-gradient" },
+      { name: "Shadcn UI", color: "orange-text-gradient" },
+    ],
+    image: bazarey,
+    source_code_link: "",
+    live_demo_link: "https://bazary-frontend.vercel.app",
+  },
+  {
+    name: "closetBd",
+    description:
+      "A modern e-commerce platform built with Next.js, featuring interactive carousels/sliders with Swiper.js for enhanced browsing. Utilized RTK Query for efficient data fetching and caching. Employed Chakra UI for responsive, accessible UI components.",
+    tags: [
+      { name: "Next.js", color: "blue-text-gradient" },
+      { name: "Redux", color: "green-text-gradient" },
+      { name: "TypeScript", color: "pink-text-gradient" },
+      { name: "Chakra UI", color: "orange-text-gradient" },
+      { name: "RTK Query", color: "blue-text-gradient" },
+      { name: "Swiper.js", color: "green-text-gradient" },
+    ],
+    image: closetbd,
+    source_code_link: "",
+    live_demo_link: "https://closetbd.com",
+  },
   {
     name: "Real-Time Weather Update",
     description:
