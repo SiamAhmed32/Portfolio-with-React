@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 
@@ -20,13 +20,18 @@ const ProjectCard = ({
   return (
     <motion.div 
       variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.05, margin: "-50px" }}
       className="w-full sm:w-[360px] mb-6"
     >
       <Tilt
-        tiltMaxAngleX={35}
-        tiltMaxAngleY={35}
-        scale={1.05}
+        tiltMaxAngleX={10}
+        tiltMaxAngleY={10}
+        scale={1.02}
         transitionSpeed={450}
+        tiltEnable={true}
+        glareEnable={false}
         className='bg-tertiary p-5 rounded-2xl h-full flex flex-col w-full'
       >
         <div className='relative w-full h-[230px] flex-shrink-0 bg-gray-800 rounded-2xl overflow-hidden'>
@@ -94,13 +99,30 @@ const ProjectCard = ({
 };
 
 const Works = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   // Debug: Log projects count
   console.log('Total projects:', projects.length);
   console.log('Projects:', projects.map(p => p.name));
 
   return (
     <>
-      <motion.div variants={textVariant()} className="px-4 sm:px-0">
+      <motion.div 
+        variants={textVariant()} 
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.1 }}
+        className="px-4 sm:px-0"
+      >
         <p className={`${styles.sectionSubText} `}>My work</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
       </motion.div>
@@ -108,6 +130,9 @@ const Works = () => {
       <div className='w-full flex'>
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.1 }}
           className='mt-3 text-secondary text-[14px] sm:text-[17px] max-w-3xl leading-[24px] sm:leading-[30px] px-4 sm:px-0'
         >
           Following projects showcase my skills and experience through
@@ -118,7 +143,7 @@ const Works = () => {
         </motion.p>
       </div>
 
-      <div className='mt-20 flex flex-wrap gap-4 sm:gap-7 justify-center px-4 sm:px-0'>
+      <div className='mt-20 flex flex-wrap gap-4 sm:gap-7 justify-center px-4 sm:px-0 w-full overflow-visible'>
         {projects && projects.length > 0 ? (
           projects.map((project, index) => {
             if (!project || !project.image) {
@@ -134,7 +159,7 @@ const Works = () => {
             );
           })
         ) : (
-          <p className='text-white'>No projects found</p>
+          <p className='text-white px-4'>No projects found</p>
         )}
       </div>
     </>
